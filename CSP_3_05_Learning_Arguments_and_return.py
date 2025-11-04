@@ -7,7 +7,7 @@
 def larger():
     n1 = int(input("Enter first number: "))
     n2 = int(input("Enter second number: "))
-    print(max(n1, n2))
+    return max(n1, n2)
 
 #Modify the below function such that it asks for the users score as an input.
 #Then based on the score print out a letter grade.
