@@ -4,9 +4,7 @@
 
 #modify the below function such that it asks the user for 2 numbers as input.
 #Then have it print out the larger number
-def larger(n):
-    n1 = input("Enter first number: ")
-    n2 = input("Enter second number: ")
+def larger(n1,n2):
     return max(n1, n2)
 
 #Modify the below function such that it asks for the users score as an input.
@@ -37,10 +35,10 @@ def grade(score):
 def fizzBuzz(n):
     if n % 5 == 0 and n % 3 == 0:
         return "FizzBuzz"
-    if n % 3 == 0:
-        return "Fizz"
-    if n % 5 == 0:
-        return "Buzz"
+    elif n % 3 == 0:
+        return "fizz"
+    elif n % 5 == 0:
+        return "buzz"
     else:
         return n
 
@@ -66,11 +64,11 @@ def convertTemperature(temp):
     if temp[-1].upper() == "C":
         value = float(temp[:-1])
         out = value * 9 / 5 + 32
-        return f"{round(out, 2)}F"
+        return f"{int(out)}F"
     if temp[-1].upper() == "F":
         value = float(temp[:-1])
         out = (value - 32) * 5 / 9
-        return f"{round(out, 2)}C"
+        return f"{int(out)}C"
     else:
         return "Invalid format. Must end with 'C' or 'F'."
 
