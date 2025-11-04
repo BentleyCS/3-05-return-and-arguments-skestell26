@@ -4,9 +4,9 @@
 
 #modify the below function such that it asks the user for 2 numbers as input.
 #Then have it print out the larger number
-def larger():
-    n1 = int(input("Enter first number: "))
-    n2 = int(input("Enter second number: "))
+def larger(n):
+    n1 = input("Enter first number: ")
+    n2 = input("Enter second number: ")
     return max(n1, n2)
 
 #Modify the below function such that it asks for the users score as an input.
@@ -17,6 +17,7 @@ def larger():
 # 60+ D
 # 59- F
 def grade(score):
+    input("give me your score")
     if score >= 90:
         return "A"
     elif score >= 80:
@@ -33,13 +34,14 @@ def grade(score):
 #if the number is divisible by 3 print "fizz"
 #if the number is divisible by 5 print "buzz"
 #if both are the case then print "Fizzbuzz" instead of the prior two
-#if niether are the case print the number.
+#if neither are the case print the number.
 def fizzBuzz(n):
+    input("give me a number")
     if n % 5 == 0 and n % 3 == 0:
         return "FizzBuzz"
-    elif n % 3 == 0:
+    if n % 3 == 0:
         return "Fizz"
-    elif n % 5 == 0:
+    if n % 5 == 0:
         return "Buzz"
     else:
         return n
@@ -50,9 +52,10 @@ def fizzBuzz(n):
 #if the number is odd multiply it by 3 and add 1
 #then print the new number.
 def collatz(n):
+    input("give me a number")
     if n == 1:
         return 1
-    elif n % 2 == 0:
+    if n % 2 == 0:
         return n // 2
     else:
         return 3 * n + 1
@@ -63,11 +66,12 @@ def collatz(n):
 #Then given the temperature if it is in Fahrenheit convert it to Celsius on vice versa
 #Example 32F -> 0C  20C -> 68F
 def convertTemperature(temp):
+    input("give me a temperature")
     if temp[-1].upper() == "C":
         value = float(temp[:-1])
         out = value * 9 / 5 + 32
         return f"{round(out, 2)}F"
-    elif temp[-1].upper() == "F":
+    if temp[-1].upper() == "F":
         value = float(temp[:-1])
         out = (value - 32) * 5 / 9
         return f"{round(out, 2)}C"
